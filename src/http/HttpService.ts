@@ -29,10 +29,10 @@ class HttpService {
   [propName: string]: any;
 
   static getInstance() {
-    if (!this.instance) {
-      this.instance = new HttpService();
+    if (!HttpService.instance) {
+      HttpService.instance = new HttpService();
     }
-    return this.instance;
+    return HttpService.instance;
   }
 
   protected constructor() {
