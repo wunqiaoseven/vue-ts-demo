@@ -1,24 +1,12 @@
 <script lang="ts">
   import {Component} from 'vue-property-decorator';
-  import ScTable from '@/components/ScTable';
+  import JsxTable from '@/components/JsxTable';
   import {EnFormItemType} from '@/types/enum';
   import {ScHttp} from '@/decorators';
 
   @Component({})
-  export default class ChildTable extends ScTable {
+  export default class ChildTable extends JsxTable {
     @ScHttp(['getCaptchaApi'])
-
-    options = [
-      {
-        callback: this.detailClick,
-        name: '查看',
-      }, {
-        callback: this.deleteRow,
-        name: '删除',
-      }, {
-        callback: this.editRow,
-        name: '编辑',
-      }];
 
     tableColumns = [
       {

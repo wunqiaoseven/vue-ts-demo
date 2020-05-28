@@ -35,14 +35,14 @@ export const constantRouterMap = [
       title: '页面名称',
     },
   },
-  // // {
-  // //   path: '/main',
-  // //   name: 'MainLayout',
-  // //   component: MainLayout,//vue.js组件
-  // //   meta:{
-  // //     title:'页面名称'
-  // //   }
-  // // },
+  {
+    path: '/JsxTable',
+    name: 'JsxTable',
+    component: ()=>import('@/components/JsxTable'),//vue.js组件
+    meta:{
+      title:'页面名称'
+    }
+  },
   {path: '/404', component: ()=>import('@/pages/NoFound'), hidden: true},
   {path: '*', redirect: '/404', hidden: true},
 ];

@@ -2,7 +2,7 @@
   <div>
     <form-mixin ref="queryForm" :formData="queryFormData" :formModel.sync="tableQuery"
                 submitText="查询" cancelText="取消"
-                @on-submit="getTableList" @on-cancel="resetQuery"></form-mixin>
+                @submit="getTableList" @cancel="resetQuery"></form-mixin>
     <el-table
       :data="tableData"
       @selection-change="handleSelectionChange"
@@ -47,7 +47,7 @@
       :visible.sync="showEditDialog"
       width="30%">
       <form-mixin :formData="editFormData" :formModel.sync="editRowData"
-                  @on-submit="getTableList"></form-mixin>
+                  @submit="getTableList"></form-mixin>
 
       <span slot="footer" class="dialog-footer">
         <el-button @click="showEditDialog = false">取 消</el-button>

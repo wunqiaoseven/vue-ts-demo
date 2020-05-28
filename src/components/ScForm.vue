@@ -36,8 +36,8 @@
     </el-form-item>
     <!--按钮组-->
     <el-form-item>
-      <el-button v-if="submitText" type="primary" @click="onSubmit">{{submitText}}</el-button>
-      <el-button v-if="cancelText" @click="onCancel">{{cancelText}}</el-button>
+      <el-button v-if="submitText" type="primary" @click="submit">{{submitText}}</el-button>
+      <el-button v-if="cancelText" @click="cancel">{{cancelText}}</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -65,12 +65,12 @@
     }
 
     @Emit()
-    onSubmit() {
+    submit() {
       return this.syncedModel;
     }
 
     @Emit()
-    onCancel() {
+    cancel() {
       return this.syncedModel;
     }
 
