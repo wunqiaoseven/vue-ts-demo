@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@types/node": "^13.13.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-component": "^1.1.1",
     "element-ui": "^2.13.1",
     "js-cookie": "^2.2.1",
